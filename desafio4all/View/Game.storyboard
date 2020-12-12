@@ -12,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="EcV-A7-z2i">
             <objects>
-                <viewController id="1iL-Ov-ZcF" customClass="GameViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" id="1iL-Ov-ZcF" customClass="GameViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7g-Zw-jHw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

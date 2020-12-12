@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        rows * columns
+        if let rows = rows, let columns = columns {
+            return rows * columns
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -27,8 +30,11 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension GameViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let viewWidth = self.collectionView.frame.width
-        let cellSize = calculateCellSize(viewWidth: viewWidth, columns: columns)
-        return CGSize(width: cellSize, height: cellSize)
+        if let columns = columns {
+            let cellSize = calculateCellSize(viewWidth: viewWidth, columns: columns)
+            return CGSize(width: cellSize, height: cellSize)
+        }
+        return CGSize.zero
     }
 }
 

@@ -12,15 +12,25 @@ class GameViewController: UIViewController {
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonStart: UIButton!
-    let rows: Int = 5
-    let columns: Int = 4
+    var rows: Int?
+    var columns: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
        setupCollectionView()
         // Do any additional setup after loading the view.
     }
-
+    
+    init? (coder: NSCoder, rows: Int?, collumns: Int?) {
+        self.rows = rows
+        self.columns = collumns
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -29,7 +39,7 @@ class GameViewController: UIViewController {
     }
     
     func centerCollection() {
-        collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(rows), 0)
+        collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(rows!), 0)
     }
 
 }

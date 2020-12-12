@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cc4-Sa-FsY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Sqb-Y8-Joy">
+            <objects>
+                <viewController storyboardIdentifier="main" id="PSG-bg-GCo" customClass="MainViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNx-mT-z31">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpt-4J-M5P">
+                                <rect key="frame" x="40" y="203" width="334" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1Bj-01-EUs"/>
+                                </constraints>
+                                <state key="normal" title="4X3"/>
+                                <connections>
+                                    <action selector="goEasyLevel:" destination="PSG-bg-GCo" eventType="touchUpInside" id="aF1-Ut-4Qg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Oc-aHF">
+                                <rect key="frame" x="40" y="293" width="334" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="iyl-n9-ke9"/>
+                                </constraints>
+                                <state key="normal" title="4X4"/>
+                                <connections>
+                                    <action selector="goMediumLevel:" destination="PSG-bg-GCo" eventType="touchUpInside" id="qL6-Px-Wnx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no1-F6-XTE">
+                                <rect key="frame" x="40" y="383" width="334" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="MmA-Me-jfc"/>
+                                </constraints>
+                                <state key="normal" title="5X4"/>
+                                <connections>
+                                    <action selector="goHardLevel:" destination="PSG-bg-GCo" eventType="touchUpInside" id="iMG-kb-DlE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-sS-FWe">
+                                <rect key="frame" x="40" y="473" width="334" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="R0Q-Zj-KOD"/>
+                                </constraints>
+                                <state key="normal" title="Histórico"/>
+                                <connections>
+                                    <action selector="goHistoric:" destination="PSG-bg-GCo" eventType="touchUpInside" id="sYo-lz-T5c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Cd-au-fK7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5xD-sS-FWe" firstAttribute="top" secondItem="no1-F6-XTE" secondAttribute="bottom" constant="20" id="3ms-gX-7T5"/>
+                            <constraint firstItem="no1-F6-XTE" firstAttribute="top" secondItem="uBb-Oc-aHF" secondAttribute="bottom" constant="20" id="9z5-g3-sri"/>
+                            <constraint firstItem="no1-F6-XTE" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="IzY-JG-ldk"/>
+                            <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="xpt-4J-M5P" secondAttribute="trailing" constant="40" id="Lm3-JC-o1q"/>
+                            <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="5xD-sS-FWe" secondAttribute="trailing" constant="40" id="Ngf-l8-YMl"/>
+                            <constraint firstItem="5xD-sS-FWe" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="RLx-96-8K3"/>
+                            <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="no1-F6-XTE" secondAttribute="trailing" constant="40" id="UJx-rQ-GuN"/>
+                            <constraint firstItem="uBb-Oc-aHF" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="bH5-gp-6Ni"/>
+                            <constraint firstItem="uBb-Oc-aHF" firstAttribute="top" secondItem="xpt-4J-M5P" secondAttribute="bottom" constant="20" id="ilt-B8-a9C"/>
+                            <constraint firstItem="xpt-4J-M5P" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="pE3-IF-nf1"/>
+                            <constraint firstItem="xpt-4J-M5P" firstAttribute="top" secondItem="4Cd-au-fK7" secondAttribute="top" constant="115" id="rDh-Uu-Wum"/>
+                            <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="uBb-Oc-aHF" secondAttribute="trailing" constant="40" id="xhe-gL-fx8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vik-Uc-byx"/>
+                    <connections>
+                        <outlet property="buttonEasyLevel" destination="xpt-4J-M5P" id="yAY-jt-X3U"/>
+                        <outlet property="buttonHardLevel" destination="no1-F6-XTE" id="ntQ-bt-1ID"/>
+                        <outlet property="buttonHistoric" destination="5xD-sS-FWe" id="vkH-FH-zBc"/>
+                        <outlet property="buttonMediumLevel" destination="uBb-Oc-aHF" id="xFU-El-Xms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfD-rF-tDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092.753623188406" y="148.66071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cMA-ld-YQH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cc4-Sa-FsY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cxN-OA-0iM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PSG-bg-GCo" kind="relationship" relationship="rootViewController" id="YKK-MT-UcP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiV-eK-7wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
