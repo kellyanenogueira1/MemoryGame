@@ -26,9 +26,8 @@ class GameCollectionViewCell: UICollectionViewCell {
     }()
     
     override func layoutSubviews() {
-        setImageBackgound(name: "1")
         addBackgroundImage()
-        addWrapperView()
+      //  addWrapperView()
     }
     
     override init(frame:CGRect) {

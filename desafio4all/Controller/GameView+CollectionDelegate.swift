@@ -18,6 +18,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCollectionViewCell.reuseIdentifier, for: indexPath) as? GameCollectionViewCell else { fatalError() }
        centerCollection()
+        let imageName = String(sequence[indexPath.row])
+        cell.setImageBackgound(name: imageName)
         return cell
     }
     

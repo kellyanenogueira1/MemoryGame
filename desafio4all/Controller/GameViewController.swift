@@ -14,11 +14,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonStart: UIButton!
     var rows: Int?
     var columns: Int?
+    var sequence: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
        setupCollectionView()
-        // Do any additional setup after loading the view.
+        generateArray()
     }
     
     init? (coder: NSCoder, rows: Int?, collumns: Int?) {
@@ -40,6 +41,15 @@ class GameViewController: UIViewController {
     
     func centerCollection() {
         collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(rows!), 0)
+    }
+    
+    func generateArray() {
+        if let rows = rows, let columns = columns {
+            let total = (rows * columns) / 2
+            sequence.append(contentsOf: 1...total)
+            sequence.append(contentsOf: 1...total)
+        }
+        sequence = sequence.shuffled()
     }
 
 }
