@@ -10,9 +10,9 @@
 		AF13C4F42584169C00675259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F32584169C00675259 /* AppDelegate.swift */; };
 		AF13C4F62584169C00675259 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F52584169C00675259 /* SceneDelegate.swift */; };
 		AF13C4F82584169C00675259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F72584169C00675259 /* ViewController.swift */; };
-		AF13C4FB2584169C00675259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF13C4F92584169C00675259 /* Main.storyboard */; };
 		AF13C4FD2584169E00675259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF13C4FC2584169E00675259 /* Assets.xcassets */; };
 		AF13C5002584169E00675259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF13C4FE2584169E00675259 /* LaunchScreen.storyboard */; };
+		AF13C50D2585413700675259 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF13C50C2585413700675259 /* Game.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		AF13C4F32584169C00675259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF13C4F52584169C00675259 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF13C4F72584169C00675259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF13C4FA2584169C00675259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF13C4FC2584169E00675259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF13C4FF2584169E00675259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF13C5012584169E00675259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF13C50C2585413700675259 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		AF13C4F22584169C00675259 /* desafio4all */ = {
 			isa = PBXGroup;
 			children = (
+				AF13C50A258540F200675259 /* Controller */,
+				AF13C509258540ED00675259 /* View */,
+				AF13C508258540E700675259 /* Model */,
 				AF13C4F32584169C00675259 /* AppDelegate.swift */,
 				AF13C4F52584169C00675259 /* SceneDelegate.swift */,
-				AF13C4F72584169C00675259 /* ViewController.swift */,
-				AF13C4F92584169C00675259 /* Main.storyboard */,
 				AF13C4FC2584169E00675259 /* Assets.xcassets */,
 				AF13C4FE2584169E00675259 /* LaunchScreen.storyboard */,
 				AF13C5012584169E00675259 /* Info.plist */,
 			);
 			path = desafio4all;
+			sourceTree = "<group>";
+		};
+		AF13C508258540E700675259 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF13C509258540ED00675259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF13C50C2585413700675259 /* Game.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF13C50A258540F200675259 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF13C4F72584169C00675259 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF13C50D2585413700675259 /* Game.storyboard in Resources */,
 				AF13C5002584169E00675259 /* LaunchScreen.storyboard in Resources */,
 				AF13C4FD2584169E00675259 /* Assets.xcassets in Resources */,
-				AF13C4FB2584169C00675259 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,14 +170,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF13C4F92584169C00675259 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF13C4FA2584169C00675259 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF13C4FE2584169E00675259 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
