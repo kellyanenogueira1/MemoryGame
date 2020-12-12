@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iBp-6T-Jgb">
-                                <rect key="frame" x="0.0" y="141" width="414" height="659"/>
+                                <rect key="frame" x="20" y="141" width="374" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WzU-yf-sVb">
                                     <size key="itemSize" width="128" height="128"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cards" id="Fh6-zR-zDm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="Fh6-zR-zDm">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sc7-y8-HmR">
@@ -51,18 +51,25 @@
                         <viewLayoutGuide key="safeArea" id="13z-sq-Cvy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="top" secondItem="7Di-B6-N8j" secondAttribute="bottom" constant="20" id="5tT-f4-uZ9"/>
+                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="centerX" secondItem="13z-sq-Cvy" secondAttribute="centerX" id="3OC-MO-22k"/>
                             <constraint firstItem="VJV-7q-DDZ" firstAttribute="centerX" secondItem="13z-sq-Cvy" secondAttribute="centerX" id="7mj-42-EKj"/>
-                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="leading" secondItem="13z-sq-Cvy" secondAttribute="leading" id="E1H-1E-nRl"/>
+                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="leading" secondItem="13z-sq-Cvy" secondAttribute="leading" constant="20" id="E1H-1E-nRl"/>
                             <constraint firstItem="13z-sq-Cvy" firstAttribute="trailing" secondItem="7Di-B6-N8j" secondAttribute="trailing" constant="20" id="EaA-fK-veP"/>
-                            <constraint firstItem="13z-sq-Cvy" firstAttribute="trailing" secondItem="iBp-6T-Jgb" secondAttribute="trailing" id="RrP-Ja-4p6"/>
+                            <constraint firstItem="13z-sq-Cvy" firstAttribute="trailing" secondItem="iBp-6T-Jgb" secondAttribute="trailing" constant="20" id="RrP-Ja-4p6"/>
                             <constraint firstItem="7Di-B6-N8j" firstAttribute="top" secondItem="13z-sq-Cvy" secondAttribute="top" constant="12" id="Tsb-rL-4OX"/>
-                            <constraint firstItem="VJV-7q-DDZ" firstAttribute="top" secondItem="iBp-6T-Jgb" secondAttribute="bottom" constant="20" id="auS-zq-0g5"/>
+                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="centerY" secondItem="13z-sq-Cvy" secondAttribute="centerY" id="Ud3-Du-tRl"/>
+                            <constraint firstItem="VJV-7q-DDZ" firstAttribute="top" secondItem="iBp-6T-Jgb" secondAttribute="bottom" constant="11" id="Y1e-40-pwZ"/>
                             <constraint firstItem="13z-sq-Cvy" firstAttribute="bottom" secondItem="VJV-7q-DDZ" secondAttribute="bottom" constant="12" id="eCb-RI-BD7"/>
                             <constraint firstItem="7Di-B6-N8j" firstAttribute="leading" secondItem="13z-sq-Cvy" secondAttribute="leading" constant="20" id="k34-Yp-qJv"/>
+                            <constraint firstItem="iBp-6T-Jgb" firstAttribute="top" secondItem="7Di-B6-N8j" secondAttribute="bottom" constant="20" id="uEw-0M-wIP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ple-KV-MeR"/>
+                    <connections>
+                        <outlet property="buttonStart" destination="VJV-7q-DDZ" id="9ZT-hJ-8AN"/>
+                        <outlet property="collectionView" destination="iBp-6T-Jgb" id="OTE-QY-n9c"/>
+                        <outlet property="labelTime" destination="7Di-B6-N8j" id="lwF-ty-dks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZg-0O-Rkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
