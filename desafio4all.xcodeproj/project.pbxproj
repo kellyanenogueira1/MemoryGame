@@ -15,6 +15,8 @@
 		AF13C50D2585413700675259 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF13C50C2585413700675259 /* Game.storyboard */; };
 		AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */; };
 		AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C514258546D500675259 /* GameCollectionViewCell.swift */; };
+		AFCD1315258662B100361F3D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD1314258662B100361F3D /* Card.swift */; };
+		AFCD131B2586656600361F3D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD131A2586656600361F3D /* Board.swift */; };
 		AFDF3DC325857C1B008B8AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDF3DC225857C1B008B8AA7 /* Main.storyboard */; };
 		AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3DC52585828E008B8AA7 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		AF13C50C2585413700675259 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+CollectionDelegate.swift"; sourceTree = "<group>"; };
 		AF13C514258546D500675259 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFCD1314258662B100361F3D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AFCD131A2586656600361F3D /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AFDF3DC225857C1B008B8AA7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFDF3DC52585828E008B8AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 		AF13C508258540E700675259 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFCD1314258662B100361F3D /* Card.swift */,
+				AFCD131A2586656600361F3D /* Board.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,10 +182,12 @@
 			files = (
 				AF13C4F82584169C00675259 /* GameViewController.swift in Sources */,
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
+				AFCD1315258662B100361F3D /* Card.swift in Sources */,
 				AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
 				AF13C4F42584169C00675259 /* AppDelegate.swift in Sources */,
 				AF13C4F62584169C00675259 /* SceneDelegate.swift in Sources */,
+				AFCD131B2586656600361F3D /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
