@@ -9,6 +9,7 @@ import UIKit
 
 class GameCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "GameCollectionViewCell"
+    var card: Card?
     var backgroundImage: UIImageView = {
         let backImage = UIImageView()
         backImage.contentMode = .scaleAspectFill
@@ -16,7 +17,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         backImage.layer.masksToBounds = true
         return backImage
     }()
-    
+   
     var wrapperView: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
@@ -27,9 +28,13 @@ class GameCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         addBackgroundImage()
-      //  addWrapperView()
+        addWrapperView()
     }
-    
+    override var isSelected: Bool {
+        didSet {
+            wrapperView.isHidden = isSelected
+        }
+    }
     override init(frame:CGRect) {
         super.init(frame: frame)
     }
@@ -52,6 +57,12 @@ class GameCollectionViewCell: UICollectionViewCell {
         setupConstraints(view: wrapperView)
     }
     
+    func updateWrapperView() {
+        if let card = card {
+            wrapperView.isHidden = card.isSelected
+        }
+    }
+    
     func setupConstraints(view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -62,3 +73,4 @@ class GameCollectionViewCell: UICollectionViewCell {
         ])
     }
 }
+
