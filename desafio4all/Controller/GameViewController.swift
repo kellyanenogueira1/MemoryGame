@@ -6,25 +6,18 @@
 //
 
 import UIKit
-
 class GameViewController: UIViewController {
-
+    
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonStart: UIButton!
-    var rows: Int?
-    var columns: Int?
-    var sequence: [Int] = []
+    let board: Board?
+    var sequenceNumbers: [Int] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       setupCollectionView()
-        generateArray()
-    }
     
-    init? (coder: NSCoder, rows: Int?, collumns: Int?) {
-        self.rows = rows
-        self.columns = collumns
+    init? (coder: NSCoder, rows: Int, collumns: Int) {
+        board = Board(rows: rows, columns: collumns)
+        
         super.init(coder: coder)
     }
     
@@ -32,25 +25,33 @@ class GameViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
+        sequenceNumbers = generateSequence()
+    }
+    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = false
+        collectionView.allowsMultipleSelection = true
         collectionView.register(GameCollectionViewCell.self, forCellWithReuseIdentifier: GameCollectionViewCell.reuseIdentifier)
     }
     
     func centerCollection() {
-        collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(rows!), 0)
+        if let board = board {
+            collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(board.rows), 0)
+        }
     }
     
-    func generateArray() {
-        if let rows = rows, let columns = columns {
-            let total = (rows * columns) / 2
-            sequence.append(contentsOf: 1...total)
-            sequence.append(contentsOf: 1...total)
+    func generateSequence() -> [Int] {
+        var sequence: [Int] = []
+        if let board = board {
+            let totalNumbers = board.total / 2
+            sequence.append(contentsOf: 1...totalNumbers)
+            sequence.append(contentsOf: 1...totalNumbers)
         }
-        sequence = sequence.shuffled()
+        return sequence.shuffled()
     }
-
 }
-
