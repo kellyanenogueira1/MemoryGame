@@ -6,3 +6,12 @@
 //
 
 import Foundation
+struct Board {
+    let rows: Int
+    let columns: Int
+    var total: Int {
+        get {
+            return rows * columns
+        }
+    }
+}
