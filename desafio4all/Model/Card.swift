@@ -6,3 +6,13 @@
 //
 
 import Foundation
+struct Card {
+    let id: Int
+    let indexPath: IndexPath
+    var isSelected: Bool = false
+    var isComplete: Bool = false
+    
+    func isEqual(_ card: Card) -> Bool {
+        self.id == card.id
+    }
+}
