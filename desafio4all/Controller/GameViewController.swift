@@ -6,18 +6,19 @@
 //
 
 import UIKit
+protocol MemoryGameDelegate: class {
+    func didEndGame()
+}
 class GameViewController: UIViewController {
     
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonStart: UIButton!
-    let board: Board?
-    var sequenceNumbers: [Int] = []
-    
-    
+    let board: Board
+    let memoryGame = MemoryGame()
+    var cards = [Card]()
     init? (coder: NSCoder, rows: Int, collumns: Int) {
         board = Board(rows: rows, columns: collumns)
-        
         super.init(coder: coder)
     }
     
@@ -28,9 +29,19 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        sequenceNumbers = generateSequence()
+        setupNewGame()
+        memoryGame.delegate = self
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if memoryGame.isPlaying {
+            resetGame()
+        }
+    }
+    @IBAction func startGame(_ sender: Any) {
+        resetGame()
+    }
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -40,18 +51,21 @@ class GameViewController: UIViewController {
     }
     
     func centerCollection() {
-        if let board = board {
-            collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(board.rows), 0)
-        }
+        collectionView.contentInset.top = max((collectionView.frame.height -  collectionView.contentSize.height) / CGFloat(board.rows), 0)
     }
     
-    func generateSequence() -> [Int] {
-        var sequence: [Int] = []
-        if let board = board {
-            let totalNumbers = board.total / 2
-            sequence.append(contentsOf: 1...totalNumbers)
-            sequence.append(contentsOf: 1...totalNumbers)
-        }
-        return sequence.shuffled()
+    func setupNewGame() {
+        self.cards = memoryGame.newGame(totalCards: board.total)
+        collectionView.reloadData()
+    }
+    
+    func resetGame() {
+        memoryGame.restartGame()
+        setupNewGame()
+    }
+}
+extension GameViewController: MemoryGameDelegate {
+    func didEndGame() {
+        resetGame()
     }
 }

@@ -10,6 +10,12 @@ import UIKit
 class GameCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "GameCollectionViewCell"
     var card: Card?
+    var isShown: Bool {
+        get {
+            return self.card!.isShown
+        }
+    }
+    
     var backgroundImage: UIImageView = {
         let backImage = UIImageView()
         backImage.contentMode = .scaleAspectFill
@@ -30,12 +36,8 @@ class GameCollectionViewCell: UICollectionViewCell {
         addBackgroundImage()
         addWrapperView()
     }
-    override var isSelected: Bool {
-        didSet {
-            wrapperView.isHidden = isSelected
-        }
-    }
-    override init(frame:CGRect) {
+
+    override init (frame:CGRect) {
         super.init(frame: frame)
     }
     
@@ -43,6 +45,11 @@ class GameCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setCard(_ card: Card) {
+        self.card = card
+        card.delegate = self
+    }
+   
     func setImageBackgound(name: String) {
         backgroundImage.image = UIImage(named: name)
     }
@@ -53,14 +60,9 @@ class GameCollectionViewCell: UICollectionViewCell {
     }
     
     func addWrapperView() {
+        wrapperView.backgroundColor = .blue
         self.contentView.addSubview(wrapperView)
         setupConstraints(view: wrapperView)
-    }
-    
-    func updateWrapperView() {
-        if let card = card {
-            wrapperView.isHidden = card.isSelected
-        }
     }
     
     func setupConstraints(view: UIView) {
@@ -72,5 +74,37 @@ class GameCollectionViewCell: UICollectionViewCell {
             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
     }
+
+    func flip() {
+        UIView.transition(from: wrapperView,
+                          to: backgroundImage,
+                          duration: 0.3,
+                          options: [.transitionFlipFromLeft, .showHideTransitionViews],
+                          completion: nil)
+    }
+    
+    func flipBack() {
+        UIView.transition(from: backgroundImage,
+                          to: wrapperView,
+                          duration: 0.3,
+                          options: [.transitionFlipFromRight, .showHideTransitionViews],
+                          completion: nil)
+    }
 }
 
+extension GameCollectionViewCell: GameCellDelegate {
+    func success() {
+        wrapperView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+            self.wrapperView.backgroundColor = UIColor(red: 0/255, green: 255/255, blue: 0/255, alpha: 0.5)
+        })
+    }
+    
+    func animateCard(_ animate: Bool) {
+        if animate {
+            flip()
+        } else {
+            flipBack()
+        }
+    }
+}
