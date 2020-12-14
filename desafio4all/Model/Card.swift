@@ -1,16 +1,29 @@
 //
-//  Cell.swift
+//  Card.swift
 //  desafio4all
 //
 //  Created by Lidiane Gomes Barbosa on 13/12/20.
 //
 
 import Foundation
-struct Cell {
+import UIKit
+protocol GameCellDelegate: class {
+    func animateCard(_ animate: Bool)
+    func success()
+}
+class Card {
     let id: Int
-    let indexPath: IndexPath
-    var isSelected: Bool = false
-    var isComplete: Bool = false
+    weak var delegate: GameCellDelegate?
+    var isShown: Bool = false {
+        didSet {
+            delegate?.animateCard(isShown)
+        }
+    }
+    
+    init(id: Int) {
+        self.id = id
+        self.isShown = false
+    }
     
     func isEqual(_ card: Card) -> Bool {
         self.id == card.id
