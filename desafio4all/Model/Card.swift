@@ -1,12 +1,12 @@
 //
-//  Card.swift
+//  Cell.swift
 //  desafio4all
 //
 //  Created by Lidiane Gomes Barbosa on 13/12/20.
 //
 
 import Foundation
-struct Card {
+struct Cell {
     let id: Int
     let indexPath: IndexPath
     var isSelected: Bool = false
