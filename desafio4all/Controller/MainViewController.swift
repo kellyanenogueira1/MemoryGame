@@ -71,9 +71,9 @@ class MainViewController: UIViewController {
         view.layer.cornerRadius = 8
         view.layer.masksToBounds = true
         view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOffset = CGSize(width: 50, height: 50)
-        view.layer.shadowRadius = 10
-        view.layer.shadowOpacity = 17
+        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.shadowRadius = 5
+        view.layer.shadowOpacity = 0.1
     }
     
     private func showGame(rows: Int, columns: Int) {

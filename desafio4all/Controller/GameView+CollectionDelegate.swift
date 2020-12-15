@@ -41,6 +41,6 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-func calculateCellSize(viewWidth: CGFloat, columns: Int) -> CGFloat {
+private func calculateCellSize(viewWidth: CGFloat, columns: Int) -> CGFloat {
     return  CGFloat(Int(viewWidth - 20) / columns - 5)
 }
