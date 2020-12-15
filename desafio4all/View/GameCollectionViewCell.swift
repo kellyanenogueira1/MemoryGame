@@ -67,7 +67,6 @@ class GameCollectionViewCell: UICollectionViewCell {
     }
     
     func addWrapperView() {
-        wrapperView.backgroundColor = .blue
         self.contentView.addSubview(wrapperView)
         setupConstraints(view: wrapperView)
     }
