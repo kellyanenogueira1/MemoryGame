@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
         memoryGame.delegate = self
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         if memoryGame.isPlaying {
             resetGame()
