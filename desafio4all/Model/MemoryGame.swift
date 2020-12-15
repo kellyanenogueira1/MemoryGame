@@ -19,6 +19,9 @@ class MemoryGame {
     }
     
     func restartGame() {
+        cardsShown.forEach { (card) in
+            card.isShown = false
+        }
         self.isPlaying = false
         self.cards.removeAll()
         self.cardsShown.removeAll()
