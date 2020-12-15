@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     let board: Board
     let memoryGame = MemoryGame()
     var cards = [Card]()
+    var chronometer: Chronometer?
+ 
     init? (coder: NSCoder, rows: Int, collumns: Int) {
         board = Board(rows: rows, columns: collumns)
         super.init(coder: coder)
@@ -31,6 +33,7 @@ class GameViewController: UIViewController {
         setupCollectionView()
         setupNewGame()
         memoryGame.delegate = self
+        labelTime.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,10 +42,24 @@ class GameViewController: UIViewController {
             resetGame()
         }
     }
+  
     @IBAction func startGame(_ sender: Any) {
-        resetGame()
+        labelTime.text = "00 : 00 : 00"
+        labelTime.isHidden = false
+        if let chronometer = chronometer {
+            collectionView.isUserInteractionEnabled = false
+            chronometer.end()
+            self.chronometer = nil
+            resetGame()
+        } else {
+            collectionView.isUserInteractionEnabled = true
+            chronometer = Chronometer()
+            chronometer?.delegate = self
+        }
+       
     }
     func setupCollectionView() {
+        collectionView.isUserInteractionEnabled = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = false
@@ -55,6 +72,10 @@ class GameViewController: UIViewController {
     }
     
     func setupNewGame() {
+        collectionView.visibleCells.forEach { cell in
+            guard let cell = cell as? GameCollectionViewCell else { return }
+            cell.wrapperView.backgroundColor = .blue
+        }
         self.cards = memoryGame.newGame(totalCards: board.total)
         collectionView.reloadData()
     }
@@ -65,20 +86,33 @@ class GameViewController: UIViewController {
     }
     
     func presentResult() {
-        let alert = UIAlertController(title: "Parabéns!", message: "você finalizou a partida em 00:00:00", preferredStyle: .alert)
+        labelTime.isHidden = true
+        guard let timeStr = labelTime.text else { return }
+        let alert = UIAlertController(title: "Parabéns!", message: "você finalizou a partida em " + timeStr, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sair", style: .cancel, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         }))
 
         alert.addAction(UIAlertAction(title: "Jogar", style: .default, handler: { _ in
+            self.collectionView.isUserInteractionEnabled = false
             self.resetGame()
             
         }))
+      
         self.present(alert, animated: true)
     }
 }
 extension GameViewController: MemoryGameDelegate {
     func didEndGame() {
+        if let chronometer = chronometer {
+            chronometer.end()
+            self.chronometer = nil
+        }
         presentResult()
+    }
+}
+extension GameViewController: ChronometerDelegate {
+    func didUpdate() {
+        self.labelTime.text = chronometer?.time
     }
 }
