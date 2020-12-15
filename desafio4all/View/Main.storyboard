@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cc4-Sa-FsY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cc4-Sa-FsY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Jogo da Memória-->
         <scene sceneID="Sqb-Y8-Joy">
             <objects>
                 <viewController storyboardIdentifier="main" id="PSG-bg-GCo" customClass="MainViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="uBb-Oc-aHF" secondAttribute="trailing" constant="40" id="xhe-gL-fx8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vik-Uc-byx"/>
+                    <navigationItem key="navigationItem" title="Jogo da Memória" largeTitleDisplayMode="always" id="Vik-Uc-byx"/>
                     <connections>
                         <outlet property="buttonEasyLevel" destination="xpt-4J-M5P" id="yAY-jt-X3U"/>
                         <outlet property="buttonHardLevel" destination="no1-F6-XTE" id="ntQ-bt-1ID"/>
