@@ -35,8 +35,15 @@ class GameCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         addBackgroundImage()
         addWrapperView()
+        addShadow()
     }
 
+    func addShadow() {
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOpacity = 0.3
+    }
     override init (frame:CGRect) {
         super.init(frame: frame)
     }
