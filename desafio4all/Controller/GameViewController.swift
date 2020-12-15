@@ -63,9 +63,22 @@ class GameViewController: UIViewController {
         memoryGame.restartGame()
         setupNewGame()
     }
+    
+    func presentResult() {
+        let alert = UIAlertController(title: "Parabéns!", message: "você finalizou a partida em 00:00:00", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sair", style: .cancel, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Jogar", style: .default, handler: { _ in
+            self.resetGame()
+            
+        }))
+        self.present(alert, animated: true)
+    }
 }
 extension GameViewController: MemoryGameDelegate {
     func didEndGame() {
-        resetGame()
+        presentResult()
     }
 }
