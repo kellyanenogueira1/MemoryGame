@@ -24,6 +24,7 @@
 		AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB812588FE11004655AC /* GameCellDelegate.swift */; };
 		AFF2BB862588FE9F004655AC /* MemoryGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */; };
 		AFF2BB892588FEE2004655AC /* ChronometerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */; };
+		AFF2BB8D2588FFBD004655AC /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB8C2588FFBD004655AC /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AFF2BB812588FE11004655AC /* GameCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellDelegate.swift; sourceTree = "<group>"; };
 		AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameDelegate.swift; sourceTree = "<group>"; };
 		AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronometerDelegate.swift; sourceTree = "<group>"; };
+		AFF2BB8C2588FFBD004655AC /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		AF13C4F22584169C00675259 /* desafio4all */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2BB8B2588FFAA004655AC /* Utils */,
 				AFF2BB802588FE01004655AC /* Protocols */,
 				AF13C50A258540F200675259 /* Controller */,
 				AF13C509258540ED00675259 /* View */,
@@ -130,6 +133,14 @@
 				AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AFF2BB8B2588FFAA004655AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFF2BB8C2588FFBD004655AC /* ColorExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				AF13C4F82584169C00675259 /* GameViewController.swift in Sources */,
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
 				AFCD1315258662B100361F3D /* Card.swift in Sources */,
+				AFF2BB8D2588FFBD004655AC /* ColorExtension.swift in Sources */,
 				AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */,
 				AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
