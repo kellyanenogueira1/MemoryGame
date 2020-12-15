@@ -21,6 +21,9 @@
 		AFDF3DC325857C1B008B8AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDF3DC225857C1B008B8AA7 /* Main.storyboard */; };
 		AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3DC52585828E008B8AA7 /* MainViewController.swift */; };
 		AFF2BB7C2588E2AA004655AC /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB7B2588E2AA004655AC /* Chronometer.swift */; };
+		AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB812588FE11004655AC /* GameCellDelegate.swift */; };
+		AFF2BB862588FE9F004655AC /* MemoryGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */; };
+		AFF2BB892588FEE2004655AC /* ChronometerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		AFDF3DC225857C1B008B8AA7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFDF3DC52585828E008B8AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AFF2BB7B2588E2AA004655AC /* Chronometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
+		AFF2BB812588FE11004655AC /* GameCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellDelegate.swift; sourceTree = "<group>"; };
+		AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameDelegate.swift; sourceTree = "<group>"; };
+		AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronometerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		AF13C4F22584169C00675259 /* desafio4all */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2BB802588FE01004655AC /* Protocols */,
 				AF13C50A258540F200675259 /* Controller */,
 				AF13C509258540ED00675259 /* View */,
 				AF13C508258540E700675259 /* Model */,
@@ -113,6 +120,16 @@
 				AFDF3DC52585828E008B8AA7 /* MainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFF2BB802588FE01004655AC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFF2BB812588FE11004655AC /* GameCellDelegate.swift */,
+				AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */,
+				AFF2BB882588FEE2004655AC /* ChronometerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +209,13 @@
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
 				AFCD1315258662B100361F3D /* Card.swift in Sources */,
 				AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */,
+				AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
 				AF13C4F42584169C00675259 /* AppDelegate.swift in Sources */,
+				AFF2BB862588FE9F004655AC /* MemoryGameDelegate.swift in Sources */,
 				AF13C4F62584169C00675259 /* SceneDelegate.swift in Sources */,
 				AFCD131B2586656600361F3D /* Board.swift in Sources */,
+				AFF2BB892588FEE2004655AC /* ChronometerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

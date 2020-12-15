@@ -6,9 +6,6 @@
 //
 
 import Foundation
-protocol ChronometerDelegate: class {
-    func didUpdate()
-}
 class Chronometer {
     private var hour: Int = 0
     private var minute: Int = 0

@@ -7,10 +7,6 @@
 
 import Foundation
 import UIKit
-protocol GameCellDelegate: class {
-    func animateCard(_ animate: Bool)
-    func success()
-}
 class Card {
     let id: Int
     weak var delegate: GameCellDelegate?

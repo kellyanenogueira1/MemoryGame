@@ -97,20 +97,3 @@ class GameCollectionViewCell: UICollectionViewCell {
                           completion: nil)
     }
 }
-
-extension GameCollectionViewCell: GameCellDelegate {
-    func success() {
-        wrapperView.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-            self.wrapperView.backgroundColor = UIColor(red: 0/255, green: 255/255, blue: 0/255, alpha: 0.5)
-        })
-    }
-    
-    func animateCard(_ animate: Bool) {
-        if animate {
-            flip()
-        } else {
-            flipBack()
-        }
-    }
-}

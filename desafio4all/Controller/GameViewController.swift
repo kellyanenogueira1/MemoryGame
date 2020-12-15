@@ -6,9 +6,7 @@
 //
 
 import UIKit
-protocol MemoryGameDelegate: class {
-    func didEndGame()
-}
+
 class GameViewController: UIViewController {
     
     @IBOutlet weak var labelTime: UILabel!
@@ -100,19 +98,5 @@ class GameViewController: UIViewController {
         }))
       
         self.present(alert, animated: true)
-    }
-}
-extension GameViewController: MemoryGameDelegate {
-    func didEndGame() {
-        if let chronometer = chronometer {
-            chronometer.end()
-            self.chronometer = nil
-        }
-        presentResult()
-    }
-}
-extension GameViewController: ChronometerDelegate {
-    func didUpdate() {
-        self.labelTime.text = chronometer?.time
     }
 }
