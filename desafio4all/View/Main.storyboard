@@ -7,8 +7,13 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CartonSix.ttf">
+            <string>CartonSix</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Jogo da Memória-->
+        <!--Main View Controller-->
         <scene sceneID="Sqb-Y8-Joy">
             <objects>
                 <viewController storyboardIdentifier="main" id="PSG-bg-GCo" customClass="MainViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,17 +22,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpt-4J-M5P">
-                                <rect key="frame" x="40" y="203" width="334" height="70"/>
+                                <rect key="frame" x="40" y="209" width="334" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="1Bj-01-EUs"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="CartonSix" family="Carton Six" pointSize="17"/>
                                 <state key="normal" title="4X3"/>
                                 <connections>
                                     <action selector="goEasyLevel:" destination="PSG-bg-GCo" eventType="touchUpInside" id="aF1-Ut-4Qg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Oc-aHF">
-                                <rect key="frame" x="40" y="293" width="334" height="70"/>
+                                <rect key="frame" x="40" y="299" width="334" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="iyl-n9-ke9"/>
                                 </constraints>
@@ -37,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no1-F6-XTE">
-                                <rect key="frame" x="40" y="383" width="334" height="70"/>
+                                <rect key="frame" x="40" y="389" width="334" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="MmA-Me-jfc"/>
                                 </constraints>
@@ -47,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-sS-FWe">
-                                <rect key="frame" x="40" y="473" width="334" height="70"/>
+                                <rect key="frame" x="40" y="479" width="334" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="R0Q-Zj-KOD"/>
                                 </constraints>
@@ -56,12 +62,20 @@
                                     <action selector="goHistoric:" destination="PSG-bg-GCo" eventType="touchUpInside" id="sYo-lz-T5c"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HL-aQ-BuR">
+                                <rect key="frame" x="20" y="108" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Cd-au-fK7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xpt-4J-M5P" firstAttribute="top" secondItem="6HL-aQ-BuR" secondAttribute="bottom" constant="80" id="0ZQ-ME-8Jo"/>
                             <constraint firstItem="5xD-sS-FWe" firstAttribute="top" secondItem="no1-F6-XTE" secondAttribute="bottom" constant="20" id="3ms-gX-7T5"/>
                             <constraint firstItem="no1-F6-XTE" firstAttribute="top" secondItem="uBb-Oc-aHF" secondAttribute="bottom" constant="20" id="9z5-g3-sri"/>
+                            <constraint firstItem="6HL-aQ-BuR" firstAttribute="top" secondItem="4Cd-au-fK7" secondAttribute="top" constant="20" id="BSG-5Y-ly6"/>
                             <constraint firstItem="no1-F6-XTE" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="IzY-JG-ldk"/>
                             <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="xpt-4J-M5P" secondAttribute="trailing" constant="40" id="Lm3-JC-o1q"/>
                             <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="5xD-sS-FWe" secondAttribute="trailing" constant="40" id="Ngf-l8-YMl"/>
@@ -69,17 +83,19 @@
                             <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="no1-F6-XTE" secondAttribute="trailing" constant="40" id="UJx-rQ-GuN"/>
                             <constraint firstItem="uBb-Oc-aHF" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="bH5-gp-6Ni"/>
                             <constraint firstItem="uBb-Oc-aHF" firstAttribute="top" secondItem="xpt-4J-M5P" secondAttribute="bottom" constant="20" id="ilt-B8-a9C"/>
+                            <constraint firstItem="6HL-aQ-BuR" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="20" id="jc1-bc-won"/>
+                            <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="6HL-aQ-BuR" secondAttribute="trailing" constant="20" id="oD7-ZR-Enw"/>
                             <constraint firstItem="xpt-4J-M5P" firstAttribute="leading" secondItem="4Cd-au-fK7" secondAttribute="leading" constant="40" id="pE3-IF-nf1"/>
-                            <constraint firstItem="xpt-4J-M5P" firstAttribute="top" secondItem="4Cd-au-fK7" secondAttribute="top" constant="115" id="rDh-Uu-Wum"/>
                             <constraint firstItem="4Cd-au-fK7" firstAttribute="trailing" secondItem="uBb-Oc-aHF" secondAttribute="trailing" constant="40" id="xhe-gL-fx8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jogo da Memória" largeTitleDisplayMode="always" id="Vik-Uc-byx"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Vik-Uc-byx"/>
                     <connections>
                         <outlet property="buttonEasyLevel" destination="xpt-4J-M5P" id="yAY-jt-X3U"/>
                         <outlet property="buttonHardLevel" destination="no1-F6-XTE" id="ntQ-bt-1ID"/>
                         <outlet property="buttonHistoric" destination="5xD-sS-FWe" id="vkH-FH-zBc"/>
                         <outlet property="buttonMediumLevel" destination="uBb-Oc-aHF" id="xFU-El-Xms"/>
+                        <outlet property="titleLabel" destination="6HL-aQ-BuR" id="f0N-x3-uQF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfD-rF-tDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

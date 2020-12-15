@@ -15,11 +15,13 @@
 		AF13C50D2585413700675259 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF13C50C2585413700675259 /* Game.storyboard */; };
 		AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */; };
 		AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C514258546D500675259 /* GameCollectionViewCell.swift */; };
+		AF1749B725891B1A00ADAD40 /* CartonSix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF1749B625891B1A00ADAD40 /* CartonSix.ttf */; };
 		AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */; };
 		AFCD1315258662B100361F3D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD1314258662B100361F3D /* Card.swift */; };
 		AFCD131B2586656600361F3D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD131A2586656600361F3D /* Board.swift */; };
 		AFDF3DC325857C1B008B8AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDF3DC225857C1B008B8AA7 /* Main.storyboard */; };
 		AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3DC52585828E008B8AA7 /* MainViewController.swift */; };
+		AFE0C8232589250D00D538B5 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0C8222589250D00D538B5 /* UIFontExtension.swift */; };
 		AFF2BB7C2588E2AA004655AC /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB7B2588E2AA004655AC /* Chronometer.swift */; };
 		AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB812588FE11004655AC /* GameCellDelegate.swift */; };
 		AFF2BB862588FE9F004655AC /* MemoryGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */; };
@@ -38,11 +40,13 @@
 		AF13C50C2585413700675259 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+CollectionDelegate.swift"; sourceTree = "<group>"; };
 		AF13C514258546D500675259 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF1749B625891B1A00ADAD40 /* CartonSix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartonSix.ttf; sourceTree = "<group>"; };
 		AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		AFCD1314258662B100361F3D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AFCD131A2586656600361F3D /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AFDF3DC225857C1B008B8AA7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFDF3DC52585828E008B8AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AFE0C8222589250D00D538B5 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		AFF2BB7B2588E2AA004655AC /* Chronometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
 		AFF2BB812588FE11004655AC /* GameCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellDelegate.swift; sourceTree = "<group>"; };
 		AFF2BB852588FE9F004655AC /* MemoryGameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		AF13C4F22584169C00675259 /* desafio4all */ = {
 			isa = PBXGroup;
 			children = (
+				AF1749B525891AFF00ADAD40 /* Font */,
 				AFF2BB8B2588FFAA004655AC /* Utils */,
 				AFF2BB802588FE01004655AC /* Protocols */,
 				AF13C50A258540F200675259 /* Controller */,
@@ -125,6 +130,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AF1749B525891AFF00ADAD40 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AF1749B625891B1A00ADAD40 /* CartonSix.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		AFF2BB802588FE01004655AC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF2BB8C2588FFBD004655AC /* ColorExtension.swift */,
+				AFE0C8222589250D00D538B5 /* UIFontExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1749B725891B1A00ADAD40 /* CartonSix.ttf in Resources */,
 				AF13C50D2585413700675259 /* Game.storyboard in Resources */,
 				AF13C5002584169E00675259 /* LaunchScreen.storyboard in Resources */,
 				AF13C4FD2584169E00675259 /* Assets.xcassets in Resources */,
@@ -215,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF2BB7C2588E2AA004655AC /* Chronometer.swift in Sources */,
+				AFE0C8232589250D00D538B5 /* UIFontExtension.swift in Sources */,
 				AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */,
 				AF13C4F82584169C00675259 /* GameViewController.swift in Sources */,
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
@@ -376,7 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.desafio4all;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -395,7 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.desafio4all;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

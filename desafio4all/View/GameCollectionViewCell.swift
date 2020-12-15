@@ -28,17 +28,17 @@ class GameCollectionViewCell: UICollectionViewCell {
         let view = UIView()
         view.backgroundColor = .blue
         view.layer.cornerRadius = 8
-        view.layer.masksToBounds = true
+        view.layer.masksToBounds = false
         return view
     }()
     
     override func layoutSubviews() {
         addBackgroundImage()
         addWrapperView()
-        addShadow()
+        configureUI()
     }
 
-    func addShadow() {
+    func configureUI() {
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
         contentView.layer.shadowRadius = 5
