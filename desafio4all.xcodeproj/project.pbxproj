@@ -16,6 +16,8 @@
 		AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */; };
 		AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C514258546D500675259 /* GameCollectionViewCell.swift */; };
 		AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */; };
+		AF25BCF5258A45B30048DE24 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF25BCF4258A45B30048DE24 /* Alert.storyboard */; };
+		AF25BCF8258A477A0048DE24 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25BCF7258A477A0048DE24 /* AlertViewController.swift */; };
 		AFCD1315258662B100361F3D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD1314258662B100361F3D /* Card.swift */; };
 		AFCD131B2586656600361F3D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD131A2586656600361F3D /* Board.swift */; };
 		AFDF2F2125892DB500DB133E /* CartonSix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFDF2F2025892DB500DB133E /* CartonSix.ttf */; };
@@ -41,6 +43,8 @@
 		AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+CollectionDelegate.swift"; sourceTree = "<group>"; };
 		AF13C514258546D500675259 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		AF25BCF4258A45B30048DE24 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		AF25BCF7258A477A0048DE24 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		AFCD1314258662B100361F3D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AFCD131A2586656600361F3D /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AFDF2F2025892DB500DB133E /* CartonSix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartonSix.ttf; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				AF13C50C2585413700675259 /* Game.storyboard */,
 				AF13C514258546D500675259 /* GameCollectionViewCell.swift */,
 				AFDF3DC225857C1B008B8AA7 /* Main.storyboard */,
+				AF25BCF4258A45B30048DE24 /* Alert.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				AF13C4F72584169C00675259 /* GameViewController.swift */,
 				AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */,
 				AFDF3DC52585828E008B8AA7 /* MainViewController.swift */,
+				AF25BCF7258A477A0048DE24 /* AlertViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				AF13C5002584169E00675259 /* LaunchScreen.storyboard in Resources */,
 				AF13C4FD2584169E00675259 /* Assets.xcassets in Resources */,
 				AFDF3DC325857C1B008B8AA7 /* Main.storyboard in Resources */,
+				AF25BCF5258A45B30048DE24 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 				AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
 				AF13C4F42584169C00675259 /* AppDelegate.swift in Sources */,
+				AF25BCF8258A477A0048DE24 /* AlertViewController.swift in Sources */,
 				AFF2BB862588FE9F004655AC /* MemoryGameDelegate.swift in Sources */,
 				AF13C4F62584169C00675259 /* SceneDelegate.swift in Sources */,
 				AFCD131B2586656600361F3D /* Board.swift in Sources */,

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2XC-8r-BLX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="P76-LT-YL1">
+            <objects>
+                <viewController storyboardIdentifier="alert" id="2XC-8r-BLX" customClass="AlertViewController" customModule="desafio4all" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufZ-sG-QUV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-wC-hgy">
+                                <rect key="frame" x="20" y="278" width="374" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF9-r9-Cvq">
+                                        <rect key="frame" x="20" y="45" width="334" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você finalizou a partida em:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBh-Nh-t2F">
+                                        <rect key="frame" x="20" y="133.5" width="334" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbs-y1-QvZ">
+                                        <rect key="frame" x="20" y="164.5" width="334" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-aK-jyL">
+                                        <rect key="frame" x="40" y="275" width="95" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="NSI-1g-aVT"/>
+                                            <constraint firstAttribute="width" constant="95" id="VFe-h5-7X6"/>
+                                        </constraints>
+                                        <state key="normal" title="Jogar"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="2XC-8r-BLX" eventType="touchUpInside" id="idO-4c-hSI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-vI-ptu">
+                                        <rect key="frame" x="239" y="275" width="95" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="LAe-Yp-r5Y"/>
+                                            <constraint firstAttribute="width" constant="95" id="O6f-NG-o6y"/>
+                                        </constraints>
+                                        <state key="normal" title="Sair"/>
+                                        <connections>
+                                            <action selector="leaveGame:" destination="2XC-8r-BLX" eventType="touchUpInside" id="UuS-yD-KgI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Zbs-y1-QvZ" firstAttribute="centerY" secondItem="mCn-wC-hgy" secondAttribute="centerY" id="0rz-1e-EXB"/>
+                                    <constraint firstAttribute="trailing" secondItem="rF9-r9-Cvq" secondAttribute="trailing" constant="20" id="1WY-tx-IGD"/>
+                                    <constraint firstItem="GBh-Nh-t2F" firstAttribute="leading" secondItem="mCn-wC-hgy" secondAttribute="leading" constant="20" id="3gP-4o-PbW"/>
+                                    <constraint firstItem="Zbs-y1-QvZ" firstAttribute="leading" secondItem="mCn-wC-hgy" secondAttribute="leading" constant="20" id="5LH-rD-hYx"/>
+                                    <constraint firstItem="oQl-aK-jyL" firstAttribute="leading" secondItem="mCn-wC-hgy" secondAttribute="leading" constant="40" id="6rC-iY-n8j"/>
+                                    <constraint firstAttribute="height" constant="350" id="9Ca-t0-f3L"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zbs-y1-QvZ" secondAttribute="trailing" constant="20" id="Cb8-FQ-CHF"/>
+                                    <constraint firstItem="Zbs-y1-QvZ" firstAttribute="top" secondItem="GBh-Nh-t2F" secondAttribute="bottom" constant="10" id="DVL-og-kyp"/>
+                                    <constraint firstItem="rF9-r9-Cvq" firstAttribute="leading" secondItem="mCn-wC-hgy" secondAttribute="leading" constant="20" id="GFX-3h-N6l"/>
+                                    <constraint firstAttribute="trailing" secondItem="IKb-vI-ptu" secondAttribute="trailing" constant="40" id="Ild-b6-Qtd"/>
+                                    <constraint firstAttribute="bottom" secondItem="oQl-aK-jyL" secondAttribute="bottom" constant="30" id="LSu-L3-L0L"/>
+                                    <constraint firstAttribute="bottom" secondItem="IKb-vI-ptu" secondAttribute="bottom" constant="30" id="dsH-8O-90q"/>
+                                    <constraint firstAttribute="trailing" secondItem="GBh-Nh-t2F" secondAttribute="trailing" constant="20" id="mml-vM-tJh"/>
+                                    <constraint firstItem="rF9-r9-Cvq" firstAttribute="top" secondItem="mCn-wC-hgy" secondAttribute="top" constant="45" id="p3J-lr-MvJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3mm-1d-8rF"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70154273431032699" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mCn-wC-hgy" firstAttribute="leading" secondItem="3mm-1d-8rF" secondAttribute="leading" constant="20" id="DlZ-dS-xvD"/>
+                            <constraint firstItem="mCn-wC-hgy" firstAttribute="centerY" secondItem="3mm-1d-8rF" secondAttribute="centerY" id="HjP-vu-cWn"/>
+                            <constraint firstItem="3mm-1d-8rF" firstAttribute="trailing" secondItem="mCn-wC-hgy" secondAttribute="trailing" constant="20" id="pUa-UF-0gQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="mCn-wC-hgy" id="nu6-l1-omL"/>
+                        <outlet property="congratsLabel" destination="rF9-r9-Cvq" id="f87-3i-Jgf"/>
+                        <outlet property="leaveButton" destination="IKb-vI-ptu" id="FF4-ad-d9v"/>
+                        <outlet property="messageLabel" destination="GBh-Nh-t2F" id="AP6-IW-Onf"/>
+                        <outlet property="playButton" destination="oQl-aK-jyL" id="ysa-hU-gyj"/>
+                        <outlet property="timeLabel" destination="Zbs-y1-QvZ" id="4CR-Ds-8TX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARJ-KG-IHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

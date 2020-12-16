@@ -16,15 +16,7 @@ class GameViewController: UIViewController {
     let memoryGame = MemoryGame()
     var cards = [Card]()
     var chronometer: Chronometer?
-    
-    var titleButton: UILabel = {
-        let text = UILabel()
-        text.font = .customFont(ofSize: 30)
-        text.textAlignment = .center
-        text.textColor = .textColor
-        return text
-    }()
-    
+
     var titleView: UILabel = {
         let title: UILabel = UILabel()
         title.text = "Jogo da memória"
@@ -139,18 +131,12 @@ class GameViewController: UIViewController {
     func presentResult() {
         labelTime.isHidden = true
         guard let timeStr = labelTime.text else { return }
-        let alert = UIAlertController(title: "Parabéns!", message: "você finalizou a partida em " + timeStr, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Sair", style: .cancel, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
-        }))
-
-        alert.addAction(UIAlertAction(title: "Jogar", style: .default, handler: { _ in
-            self.updateButton(false)
-            self.collectionView.isUserInteractionEnabled = false
-            self.resetGame()
-            
-        }))
-      
-        self.present(alert, animated: true)
+        let storyboard = UIStoryboard(name: "Alert", bundle: nil)
+        guard let alertVC = storyboard.instantiateViewController(identifier: "alert") as? AlertViewController else { return }
+        alertVC.labelTime = timeStr
+        alertVC.delegate = self
+        alertVC.modalTransitionStyle = .crossDissolve
+        alertVC.modalPresentationStyle = .overFullScreen
+        self.present(alertVC, animated: true)
     }
 }
