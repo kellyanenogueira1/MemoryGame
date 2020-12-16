@@ -15,8 +15,7 @@ protocol GameCellDelegate: class {
 extension GameCollectionViewCell: GameCellDelegate {
     func success() {
         wrapperView.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-            self.wrapperView.backgroundColor = UIColor(red: 65/255, green: 157/255, blue: 120/255, alpha: 0.5)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { self.wrapperView.backgroundColor = .greenSuccess
         })
     }
     
