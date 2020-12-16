@@ -32,6 +32,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func goHistoric(_ sender: Any) {
+        showHistoric()
     }
     
     private func configureUI() {
@@ -83,5 +84,12 @@ class MainViewController: UIViewController {
             return GameViewController(coder: coder, rows: rows, collumns: columns)
         }) 
         navigationController?.pushViewController(viewC, animated: true)
+    }
+    
+    private func showHistoric() {
+        let storyboard = UIStoryboard(name: "Historic", bundle: nil)
+        guard let viewC = storyboard.instantiateViewController(identifier: "historic") as? HistoricViewController else { return }
+        viewC.modalPresentationStyle = .fullScreen
+        self.present(viewC, animated: true, completion: nil)
     }
 }

@@ -18,6 +18,10 @@
 		AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */; };
 		AF25BCF5258A45B30048DE24 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF25BCF4258A45B30048DE24 /* Alert.storyboard */; };
 		AF25BCF8258A477A0048DE24 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25BCF7258A477A0048DE24 /* AlertViewController.swift */; };
+		AF25BCFB258A51A20048DE24 /* Historic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF25BCFA258A51A20048DE24 /* Historic.storyboard */; };
+		AF25BCFE258A52840048DE24 /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25BCFD258A52840048DE24 /* HistoricViewController.swift */; };
+		AF25BD01258A52CB0048DE24 /* Historic+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25BD00258A52CB0048DE24 /* Historic+TableViewDelegate.swift */; };
+		AF25BD04258A531A0048DE24 /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25BD03258A531A0048DE24 /* HistoricTableViewCell.swift */; };
 		AFCD1315258662B100361F3D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD1314258662B100361F3D /* Card.swift */; };
 		AFCD131B2586656600361F3D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD131A2586656600361F3D /* Board.swift */; };
 		AFDF2F2125892DB500DB133E /* CartonSix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFDF2F2025892DB500DB133E /* CartonSix.ttf */; };
@@ -45,6 +49,10 @@
 		AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		AF25BCF4258A45B30048DE24 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		AF25BCF7258A477A0048DE24 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		AF25BCFA258A51A20048DE24 /* Historic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historic.storyboard; sourceTree = "<group>"; };
+		AF25BCFD258A52840048DE24 /* HistoricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
+		AF25BD00258A52CB0048DE24 /* Historic+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Historic+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		AF25BD03258A531A0048DE24 /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
 		AFCD1314258662B100361F3D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AFCD131A2586656600361F3D /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AFDF2F2025892DB500DB133E /* CartonSix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartonSix.ttf; sourceTree = "<group>"; };
@@ -120,6 +128,8 @@
 				AF13C514258546D500675259 /* GameCollectionViewCell.swift */,
 				AFDF3DC225857C1B008B8AA7 /* Main.storyboard */,
 				AF25BCF4258A45B30048DE24 /* Alert.storyboard */,
+				AF25BCFA258A51A20048DE24 /* Historic.storyboard */,
+				AF25BD03258A531A0048DE24 /* HistoricTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +141,8 @@
 				AF13C5112585449E00675259 /* GameView+CollectionDelegate.swift */,
 				AFDF3DC52585828E008B8AA7 /* MainViewController.swift */,
 				AF25BCF7258A477A0048DE24 /* AlertViewController.swift */,
+				AF25BCFD258A52840048DE24 /* HistoricViewController.swift */,
+				AF25BD00258A52CB0048DE24 /* Historic+TableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 				AF13C4FD2584169E00675259 /* Assets.xcassets in Resources */,
 				AFDF3DC325857C1B008B8AA7 /* Main.storyboard in Resources */,
 				AF25BCF5258A45B30048DE24 /* Alert.storyboard in Resources */,
+				AF25BCFB258A51A20048DE24 /* Historic.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +251,14 @@
 			files = (
 				AFF2BB7C2588E2AA004655AC /* Chronometer.swift in Sources */,
 				AFE0C8232589250D00D538B5 /* UIFontExtension.swift in Sources */,
+				AF25BCFE258A52840048DE24 /* HistoricViewController.swift in Sources */,
 				AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */,
 				AF13C4F82584169C00675259 /* GameViewController.swift in Sources */,
+				AF25BD04258A531A0048DE24 /* HistoricTableViewCell.swift in Sources */,
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
 				AFCD1315258662B100361F3D /* Card.swift in Sources */,
 				AFF2BB8D2588FFBD004655AC /* ColorExtension.swift in Sources */,
+				AF25BD01258A52CB0048DE24 /* Historic+TableViewDelegate.swift in Sources */,
 				AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */,
 				AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
