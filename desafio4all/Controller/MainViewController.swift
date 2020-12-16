@@ -40,6 +40,7 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.barTintColor = .magentaBackGround
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .textColor
         
         buttonEasyLevel.titleLabel?.text = "4X3"
         layout(view: buttonEasyLevel)

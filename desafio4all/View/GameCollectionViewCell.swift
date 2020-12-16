@@ -26,7 +26,7 @@ class GameCollectionViewCell: UICollectionViewCell {
    
     var wrapperView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+        view.backgroundColor = .yellowAction
         view.layer.cornerRadius = 8
         view.layer.masksToBounds = false
         return view

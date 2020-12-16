@@ -16,6 +16,23 @@ class GameViewController: UIViewController {
     let memoryGame = MemoryGame()
     var cards = [Card]()
     var chronometer: Chronometer?
+    
+    var titleButton: UILabel = {
+        let text = UILabel()
+        text.font = .customFont(ofSize: 30)
+        text.textAlignment = .center
+        text.textColor = .textColor
+        return text
+    }()
+    
+    var titleView: UILabel = {
+        let title: UILabel = UILabel()
+        title.text = "Jogo da memória"
+        title.textAlignment = .center
+        title.textColor = .textColor
+        title.font = .customFont(ofSize: 48)
+        return title
+    }()
  
     init? (coder: NSCoder, rows: Int, collumns: Int) {
         board = Board(rows: rows, columns: collumns)
@@ -31,7 +48,41 @@ class GameViewController: UIViewController {
         setupCollectionView()
         setupNewGame()
         memoryGame.delegate = self
+        configureUI()
+       
+    }
+    
+    func configureUI() {
+        view.backgroundColor = .magentaBackGround
+        view.tintColor = .textColor
+        collectionView.backgroundColor = .magentaBackGround
+        
         labelTime.isHidden = true
+        labelTime.textColor = .textColor
+        labelTime.font = .customFont(ofSize: 30)
+        
+        buttonStart.tintColor = .textColor
+        buttonStart.backgroundColor = .greenAction
+        buttonStart.layer.shadowColor = UIColor.black.cgColor
+        buttonStart.layer.shadowOffset = CGSize(width: 0, height: 3)
+        buttonStart.layer.shadowRadius = 5
+        buttonStart.layer.shadowOpacity = 0.3
+        buttonStart.layer.cornerRadius = 8
+        buttonStart.layer.masksToBounds = false
+        buttonStart.setTitle("Jogar", for: .normal)
+        buttonStart.titleLabel?.font = .customFont(ofSize: 30)
+        
+        navigationItem.titleView = titleView
+    }
+    
+    func updateButton(_ isPlaying: Bool) {
+        if isPlaying {
+            buttonStart.backgroundColor = .yellowAction
+            buttonStart.setTitle("Reiniciar", for: .normal)
+        } else {
+            buttonStart.backgroundColor = .greenAction
+            buttonStart.setTitle("Jogar", for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,11 +96,13 @@ class GameViewController: UIViewController {
         labelTime.text = "00 : 00 : 00"
         labelTime.isHidden = false
         if let chronometer = chronometer {
+            updateButton(false)
             collectionView.isUserInteractionEnabled = false
             chronometer.end()
             self.chronometer = nil
             resetGame()
         } else {
+            updateButton(true)
             collectionView.isUserInteractionEnabled = true
             chronometer = Chronometer()
             chronometer?.delegate = self
@@ -72,7 +125,7 @@ class GameViewController: UIViewController {
     func setupNewGame() {
         collectionView.visibleCells.forEach { cell in
             guard let cell = cell as? GameCollectionViewCell else { return }
-            cell.wrapperView.backgroundColor = .blue
+            cell.wrapperView.backgroundColor = .yellowAction
         }
         self.cards = memoryGame.newGame(totalCards: board.total)
         collectionView.reloadData()
@@ -92,6 +145,7 @@ class GameViewController: UIViewController {
         }))
 
         alert.addAction(UIAlertAction(title: "Jogar", style: .default, handler: { _ in
+            self.updateButton(false)
             self.collectionView.isUserInteractionEnabled = false
             self.resetGame()
             
