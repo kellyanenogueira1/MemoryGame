@@ -24,12 +24,13 @@ class AlertViewController: UIViewController {
     }
     
     @IBAction func playAgain(_ sender: Any) {
-        delegate?.playAgain()
         self.dismiss(animated: true, completion: nil)
+        delegate?.playAgain()
     }
     
     @IBAction func leaveGame(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        delegate?.leaveGame()
     }
     
     func configureUI(){

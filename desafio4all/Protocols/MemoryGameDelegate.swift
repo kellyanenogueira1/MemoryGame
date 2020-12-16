@@ -10,9 +10,14 @@ import UIKit
 protocol MemoryGameDelegate: class {
     func didEndGame()
     func playAgain()
+    func leaveGame()
 }
 
 extension GameViewController: MemoryGameDelegate {
+    func leaveGame() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func playAgain() {
         self.updateButton(false)
         self.collectionView.isUserInteractionEnabled = false
