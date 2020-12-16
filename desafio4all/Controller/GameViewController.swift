@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
         title.text = "Jogo da memória"
         title.textAlignment = .center
         title.textColor = .textColor
-        title.font = .customFont(ofSize: 48)
+        title.font = .customFont(ofSize: 40)
         return title
     }()
  

@@ -11,9 +11,11 @@ class HistoricTableViewCell: UITableViewCell {
     static let reuseIdentifier = "HistoricTableViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
-
+    override func layoutSubviews() {
+        contentView.backgroundColor = .magentaBackGround
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
