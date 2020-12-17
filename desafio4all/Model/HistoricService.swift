@@ -11,19 +11,19 @@ struct HistoricService {
     static let shared = HistoricService()
     
     func fetch(context: NSManagedObjectContext, predicate: NSPredicate?) -> [Historic] {
-        var transacoes: [Historic] = []
+        var historic: [Historic] = []
         do {
             let request = Historic.fetchRequest() as NSFetchRequest<Historic>
             if predicate != nil {
                 request.predicate = predicate
             }
-            transacoes = try context.fetch(request)
+            historic = try context.fetch(request)
         } catch {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
         
-        return transacoes
+        return historic
     }
     
     func save(context: NSManagedObjectContext) {
@@ -35,4 +35,21 @@ struct HistoricService {
         }
     }
     
+    
+    func createNewHistoric(context: NSManagedObjectContext, level: Int, timeString: String) {
+        let newHistoric = Historic(context: context)
+        newHistoric.id = UUID()
+        newHistoric.date = Date()
+        newHistoric.level = Int16(level)
+        newHistoric.time = timeString
+    }
+    
+    func removeAll(context: NSManagedObjectContext ){
+            let items = fetch(context: context, predicate: NSPredicate(value: true))
+
+            for item in items {
+                context.delete(item)
+            }
+            save(context: context)
+    }
 }
