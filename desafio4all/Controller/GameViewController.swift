@@ -85,7 +85,12 @@ class GameViewController: UIViewController {
         }
     }
   
+    
     @IBAction func startGame(_ sender: Any) {
+        start()
+    }
+    
+    func start() {
         labelTime.text = "00 : 00 : 00"
         labelTime.isHidden = false
         if let chronometer = chronometer {
@@ -100,8 +105,8 @@ class GameViewController: UIViewController {
             chronometer = Chronometer()
             chronometer?.delegate = self
         }
-       
     }
+    
     func setupCollectionView() {
         collectionView.isUserInteractionEnabled = false
         collectionView.delegate = self

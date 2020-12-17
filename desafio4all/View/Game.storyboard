@@ -45,7 +45,7 @@
                                 </constraints>
                                 <state key="normal" title="Reiniciar"/>
                                 <connections>
-                                    <action selector="startGame:" destination="1iL-Ov-ZcF" eventType="touchUpInside" id="n2y-h8-rCB"/>
+                                    <action selector="startGame:" destination="1iL-Ov-ZcF" eventType="touchUpInside" id="2iZ-qf-mba"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-B6-N8j">

@@ -19,9 +19,8 @@ extension GameViewController: MemoryGameDelegate {
     }
     
     func playAgain() {
-        self.updateButton(false)
-        self.collectionView.isUserInteractionEnabled = false
         self.resetGame()
+        start()
     }
     
     func didEndGame() {
