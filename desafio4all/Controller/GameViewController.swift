@@ -6,16 +6,18 @@
 //
 
 import UIKit
-
+import CoreData
 class GameViewController: UIViewController {
     
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonStart: UIButton!
+    var context: NSManagedObjectContext!
     let board: Board
     let memoryGame = MemoryGame()
     var cards = [Card]()
     var chronometer: Chronometer?
+    var level: Level!
 
     var titleView: UILabel = {
         let title: UILabel = UILabel()
@@ -41,7 +43,6 @@ class GameViewController: UIViewController {
         setupNewGame()
         memoryGame.delegate = self
         configureUI()
-       
     }
     
     func configureUI() {
@@ -108,6 +109,12 @@ class GameViewController: UIViewController {
         collectionView.isScrollEnabled = false
         collectionView.allowsMultipleSelection = true
         collectionView.register(GameCollectionViewCell.self, forCellWithReuseIdentifier: GameCollectionViewCell.reuseIdentifier)
+    }
+    
+    func saveHistoric() {
+        guard let timeString = labelTime.text else { return }
+        HistoricService.shared.createNewHistoric(context: context, level: level.rawValue, timeString: timeString)
+        HistoricService.shared.save(context: context)
     }
     
     func centerCollection() {
