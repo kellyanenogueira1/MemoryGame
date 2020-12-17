@@ -29,6 +29,7 @@ extension GameViewController: MemoryGameDelegate {
             chronometer.end()
             self.chronometer = nil
         }
+        saveHistoric()
         presentResult()
     }
 }
