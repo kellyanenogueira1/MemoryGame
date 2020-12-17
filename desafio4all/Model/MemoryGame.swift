@@ -81,9 +81,14 @@ class MemoryGame {
     private func generateSequence(totalCards: Int) -> [Int] {
         var sequence: [Int] = []
         let totalNumbers = totalCards / 2
-        sequence.append(contentsOf: 1...totalNumbers)
-        sequence.append(contentsOf: 1...totalNumbers)
-        
+
+        let allAssets = [1,2,3,4,5,6,7,8,9,10].shuffled()
+        for (ind, value) in allAssets.enumerated() {
+            if ind < totalNumbers {
+                sequence.append( value)
+            }
+        }
+        sequence += sequence
         return sequence.shuffled()
     }
 }
