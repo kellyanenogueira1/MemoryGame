@@ -31,8 +31,17 @@ class HistoricTableViewCell: UITableViewCell {
     }
     
     func configureCell(historic: Historic) {
-        labelDate.text = historic.date
-        labelLevel.text = historic.level
+        labelDate.text = historic.date?.toString()
+        switch historic.level {
+        case 1:
+            labelLevel.text = "4x3"
+        case 2:
+            labelLevel.text = "4x4"
+        case 3:
+            labelLevel.text = "5x4"
+        default:
+            labelLevel.text = ""
+        }
         labelTime.text = historic.time
     }
 }
