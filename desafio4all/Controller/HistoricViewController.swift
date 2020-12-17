@@ -40,15 +40,17 @@ class HistoricViewController: UIViewController {
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(HistoricTableViewCell.self, forCellReuseIdentifier: HistoricTableViewCell.reuseIdentifier)
+        tableView.isScrollEnabled = false
+        tableView.allowsSelection = false
     }
     
     
     func configureUI() {
         view.tintColor = .yellowAction
+        view.backgroundColor = .magentaBackGround
+        
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .magentaBackGround
-        view.backgroundColor = .magentaBackGround
     }
     
     func viewForHeader() -> UIView {

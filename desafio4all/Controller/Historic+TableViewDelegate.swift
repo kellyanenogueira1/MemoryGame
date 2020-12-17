@@ -16,11 +16,7 @@ extension HistoricViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoricTableViewCell.reuseIdentifier) as? HistoricTableViewCell else { return UITableViewCell() }
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "historic"
-    }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
          100
     }
