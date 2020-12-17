@@ -6,12 +6,12 @@
 //
 
 import UIKit
-
+import CoreData
 class HistoricTableViewCell: UITableViewCell {
     static let reuseIdentifier = "HistoricTableViewCell"
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelLevel: UILabel!
-    @IBOutlet weak var labelHour: UILabel!
+    @IBOutlet weak var labelTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,19 +19,20 @@ class HistoricTableViewCell: UITableViewCell {
     }
     override func layoutSubviews() {
         contentView.backgroundColor = .magentaBackGround
-        labelDate.text = "20/08/2020"
         configureLabel(label: labelDate)
-        
-        labelLevel.text = "4X4"
         configureLabel(label: labelLevel)
-        
-        labelHour.text = "00 : 00 : 00"
-        configureLabel(label: labelHour)
+        configureLabel(label: labelTime)
     }
     
     func configureLabel(label: UILabel) {
         label.textColor = .textColor
         label.textAlignment = .center
         label.font = .customFont(ofSize: 30)
+    }
+    
+    func configureCell(historic: Historic) {
+        labelDate.text = historic.date
+        labelLevel.text = historic.level
+        labelTime.text = historic.time
     }
 }

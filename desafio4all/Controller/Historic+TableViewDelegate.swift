@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 extension HistoricViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        historic.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoricTableViewCell.reuseIdentifier) as? HistoricTableViewCell else { return UITableViewCell() }
+        cell.configureCell(historic: historic[indexPath.row])
         return cell
     }
     

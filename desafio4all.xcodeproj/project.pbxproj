@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0D0AB0258B703A00116488 /* HistoricService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D0AAF258B703A00116488 /* HistoricService.swift */; };
+		AF0D0AB4258B710000116488 /* MemoryGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0D0AB2258B710000116488 /* MemoryGame.xcdatamodeld */; };
 		AF13C4F42584169C00675259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F32584169C00675259 /* AppDelegate.swift */; };
 		AF13C4F62584169C00675259 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F52584169C00675259 /* SceneDelegate.swift */; };
 		AF13C4F82584169C00675259 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13C4F72584169C00675259 /* GameViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0D0AAF258B703A00116488 /* HistoricService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricService.swift; sourceTree = "<group>"; };
+		AF0D0AB3258B710000116488 /* MemoryGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemoryGame.xcdatamodel; sourceTree = "<group>"; };
 		AF13C4F02584169C00675259 /* desafio4all.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio4all.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF13C4F32584169C00675259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF13C4F52584169C00675259 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				AFCD131A2586656600361F3D /* Board.swift */,
 				AF1C6A5B25878EE6003DFCD0 /* MemoryGame.swift */,
 				AFF2BB7B2588E2AA004655AC /* Chronometer.swift */,
+				AF0D0AAF258B703A00116488 /* HistoricService.swift */,
+				AF0D0AB2258B710000116488 /* MemoryGame.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,12 +259,14 @@
 				AFE0C8232589250D00D538B5 /* UIFontExtension.swift in Sources */,
 				AF25BCFE258A52840048DE24 /* HistoricViewController.swift in Sources */,
 				AF1C6A5C25878EE6003DFCD0 /* MemoryGame.swift in Sources */,
+				AF0D0AB0258B703A00116488 /* HistoricService.swift in Sources */,
 				AF13C4F82584169C00675259 /* GameViewController.swift in Sources */,
 				AF25BD04258A531A0048DE24 /* HistoricTableViewCell.swift in Sources */,
 				AF13C515258546D500675259 /* GameCollectionViewCell.swift in Sources */,
 				AFCD1315258662B100361F3D /* Card.swift in Sources */,
 				AFF2BB8D2588FFBD004655AC /* ColorExtension.swift in Sources */,
 				AF25BD01258A52CB0048DE24 /* Historic+TableViewDelegate.swift in Sources */,
+				AF0D0AB4258B710000116488 /* MemoryGame.xcdatamodeld in Sources */,
 				AF13C5122585449E00675259 /* GameView+CollectionDelegate.swift in Sources */,
 				AFF2BB822588FE11004655AC /* GameCellDelegate.swift in Sources */,
 				AFDF3DC62585828E008B8AA7 /* MainViewController.swift in Sources */,
@@ -461,6 +469,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF0D0AB2258B710000116488 /* MemoryGame.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF0D0AB3258B710000116488 /* MemoryGame.xcdatamodel */,
+			);
+			currentVersion = AF0D0AB3258B710000116488 /* MemoryGame.xcdatamodel */;
+			path = MemoryGame.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF13C4E82584169C00675259 /* Project object */;
 }

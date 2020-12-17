@@ -57,8 +57,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelDate" destination="Aik-gp-NcT" id="U6E-v9-tJt"/>
-                                            <outlet property="labelHour" destination="pW6-IR-8r6" id="VJX-em-j3l"/>
                                             <outlet property="labelLevel" destination="C2h-p1-JRa" id="AKK-Ee-psW"/>
+                                            <outlet property="labelTime" destination="pW6-IR-8r6" id="nNg-FA-tG5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

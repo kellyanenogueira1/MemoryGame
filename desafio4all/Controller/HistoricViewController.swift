@@ -6,9 +6,25 @@
 //
 
 import UIKit
-
+import CoreData
 class HistoricViewController: UIViewController {
-
+    var context: NSManagedObjectContext!
+    var historic: [Historic] = [] {
+        didSet {
+            checkTable()
+            tableView.reloadData()
+        }
+    }
+    var alertLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Você ainda não tem partidas registradas"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.textColor = .yellowAction
+        label.font = .customFont(ofSize: 30)
+        return label
+    }()
+    
     @IBOutlet weak var tableView: UITableView!
     var tileLabel: UILabel = {
         let label = UILabel()
@@ -30,7 +46,19 @@ class HistoricViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        addAlertLabel()
         configureUI()
+    }
+    
+    func checkTable() {
+        alertLabel.isHidden = historic.isEmpty
+    }
+    
+    func fetchData() {
+        historic = HistoricService.shared.fetch(context: context, predicate: NSPredicate(value: true))
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     @objc func goBakc() {
@@ -44,7 +72,14 @@ class HistoricViewController: UIViewController {
         tableView.allowsSelection = false
     }
     
-    
+    func addAlertLabel() {
+        tableView.addSubview(alertLabel)
+        alertLabel.translatesAutoresizingMaskIntoConstraints = false
+        alertLabel.centerYAnchor.constraint(equalTo: tableView.centerYAnchor).isActive = true
+        alertLabel.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+        alertLabel.leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: 20).isActive = true
+        alertLabel.trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: 20).isActive = true
+    }
     func configureUI() {
         view.tintColor = .yellowAction
         view.backgroundColor = .magentaBackGround
