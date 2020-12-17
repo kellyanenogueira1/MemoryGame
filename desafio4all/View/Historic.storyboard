@@ -20,48 +20,45 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoricTableViewCell" rowHeight="43.5" id="0FQ-s7-i1L" customClass="HistoricTableViewCell" customModule="desafio4all" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoricTableViewCell" id="0FQ-s7-i1L" customClass="HistoricTableViewCell" customModule="desafio4all" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0FQ-s7-i1L" id="50y-Yc-PC7" customClass="HistoricTableViewCell" customModule="desafio4all" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0FQ-s7-i1L" id="50y-Yc-PC7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-gp-NcT">
-                                                    <rect key="frame" x="40" y="11.5" width="41.5" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5x4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lw-th-6Pv">
-                                                    <rect key="frame" x="182" y="11.5" width="50" height="20.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="bYM-YH-LLK"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2h-p1-JRa">
+                                                    <rect key="frame" x="186.5" y="11.5" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVM-9n-Kfl">
-                                                    <rect key="frame" x="332.5" y="11.5" width="41.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-IR-8r6">
+                                                    <rect key="frame" x="352.5" y="11.5" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Aik-gp-NcT" firstAttribute="leading" secondItem="50y-Yc-PC7" secondAttribute="leading" constant="40" id="Mfy-Ft-28F"/>
-                                                <constraint firstItem="1Lw-th-6Pv" firstAttribute="centerY" secondItem="50y-Yc-PC7" secondAttribute="centerY" id="gHs-C0-voe"/>
-                                                <constraint firstAttribute="trailing" secondItem="sVM-9n-Kfl" secondAttribute="trailing" constant="40" id="kdn-bS-MMW"/>
-                                                <constraint firstItem="1Lw-th-6Pv" firstAttribute="centerX" secondItem="50y-Yc-PC7" secondAttribute="centerX" id="qnO-KQ-A0I"/>
-                                                <constraint firstItem="sVM-9n-Kfl" firstAttribute="centerY" secondItem="50y-Yc-PC7" secondAttribute="centerY" id="vEp-47-KLm"/>
+                                                <constraint firstItem="pW6-IR-8r6" firstAttribute="centerY" secondItem="50y-Yc-PC7" secondAttribute="centerY" id="6lc-wG-jXk"/>
+                                                <constraint firstAttribute="trailing" secondItem="pW6-IR-8r6" secondAttribute="trailing" constant="20" id="JGh-D2-mYC"/>
+                                                <constraint firstItem="Aik-gp-NcT" firstAttribute="leading" secondItem="50y-Yc-PC7" secondAttribute="leading" constant="20" id="Mfy-Ft-28F"/>
+                                                <constraint firstItem="C2h-p1-JRa" firstAttribute="centerX" secondItem="50y-Yc-PC7" secondAttribute="centerX" id="pXf-rl-rGV"/>
+                                                <constraint firstItem="C2h-p1-JRa" firstAttribute="centerY" secondItem="50y-Yc-PC7" secondAttribute="centerY" id="vL2-vU-y4A"/>
                                                 <constraint firstItem="Aik-gp-NcT" firstAttribute="centerY" secondItem="50y-Yc-PC7" secondAttribute="centerY" id="xze-v2-dvq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelDate" destination="Aik-gp-NcT" id="U6E-v9-tJt"/>
-                                            <outlet property="labelHour" destination="sVM-9n-Kfl" id="sCh-o8-dne"/>
-                                            <outlet property="labelLevel" destination="1Lw-th-6Pv" id="94L-Ry-ddp"/>
+                                            <outlet property="labelHour" destination="pW6-IR-8r6" id="VJX-em-j3l"/>
+                                            <outlet property="labelLevel" destination="C2h-p1-JRa" id="AKK-Ee-psW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
