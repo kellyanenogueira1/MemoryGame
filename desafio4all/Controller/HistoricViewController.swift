@@ -11,6 +11,8 @@ class HistoricViewController: UIViewController {
     var context: NSManagedObjectContext!
     var historic: [Historic] = [] {
         didSet {
+            // sort from most recent game
+            historic.reverse()
             checkTable()
             tableView.reloadData()
         }
@@ -48,10 +50,11 @@ class HistoricViewController: UIViewController {
         setupTableView()
         addAlertLabel()
         configureUI()
+        fetchData()
     }
     
     func checkTable() {
-        alertLabel.isHidden = historic.isEmpty
+        alertLabel.isHidden = !historic.isEmpty
     }
     
     func fetchData() {
