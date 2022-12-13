@@ -18,7 +18,7 @@ class HistoricTableViewCell: UITableViewCell {
        
     }
     override func layoutSubviews() {
-        contentView.backgroundColor = .magentaBackGround
+        contentView.backgroundColor = .greenBackGroundColor
         configureLabel(label: labelDate)
         configureLabel(label: labelLevel)
         configureLabel(label: labelTime)

@@ -47,9 +47,9 @@ class MainViewController: UIViewController {
     
     private func configureUI() {
         view.tintColor = .textColor
-        view.backgroundColor = .magentaBackGround
+        view.backgroundColor = .greenBackGroundColor
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.barTintColor = .magentaBackGround
+        navigationController?.navigationBar.barTintColor = .greenBackGroundColor
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = .textColor
         

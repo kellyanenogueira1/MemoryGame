@@ -46,9 +46,9 @@ class GameViewController: UIViewController {
     }
     
     func configureUI() {
-        view.backgroundColor = .magentaBackGround
+        view.backgroundColor = .greenBackGroundColor
         view.tintColor = .textColor
-        collectionView.backgroundColor = .magentaBackGround
+        collectionView.backgroundColor = .greenBackGroundColor
         
         labelTime.isHidden = true
         labelTime.textColor = .textColor

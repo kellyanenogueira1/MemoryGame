@@ -85,15 +85,15 @@ class HistoricViewController: UIViewController {
     }
     func configureUI() {
         view.tintColor = .yellowAction
-        view.backgroundColor = .magentaBackGround
+        view.backgroundColor = .greenBackGroundColor
         
         tableView.tableFooterView = UIView()
-        tableView.backgroundColor = .magentaBackGround
+        tableView.backgroundColor = .greenBackGroundColor
     }
     
     func viewForHeader() -> UIView {
         let view = UIView()
-        view.backgroundColor = .magentaBackGround
+        view.backgroundColor = .greenBackGroundColor
         
         view.addSubview(tileLabel)
         tileLabel.translatesAutoresizingMaskIntoConstraints = false

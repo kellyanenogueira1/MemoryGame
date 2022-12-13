@@ -35,16 +35,16 @@ class AlertViewController: UIViewController {
     
     func configureUI(){
         congratsLabel.font = .customFont(ofSize: 50)
-        congratsLabel.textColor = .magentaBackGround
+        congratsLabel.textColor = .textColor
         
         messageLabel.font = .customFont(ofSize: 24)
-        messageLabel.textColor = .magentaBackGround
+        messageLabel.textColor = .textColor
         
         timeLabel.font = .customFont(ofSize: 24)
-        timeLabel.textColor = .magentaBackGround
+        timeLabel.textColor = .textColor
         timeLabel.text = labelTime
 
-        alertView.backgroundColor = .yellowAction
+        alertView.backgroundColor = .greenBackGroundColor
         layout(alertView)
         
         playButton.tintColor = .textColor
